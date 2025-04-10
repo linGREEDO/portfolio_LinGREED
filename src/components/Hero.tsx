@@ -73,7 +73,7 @@ const Hero = () => {
           backgroundSize: '28px 49px'
         }}></div>
 
-        {/* Red Data Stream Lines */}
+        {/* yellow Data Stream Lines */}
         <div className="absolute inset-0 data-stream"></div>
 
         {/* Black Wall Interface Elements */}
@@ -81,7 +81,7 @@ const Hero = () => {
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 rounded-full bg-cyber-red shadow-glow-sm"
+              className="absolute w-1 h-1 rounded-full bg-cyber-yellow shadow-glow-sm"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -96,9 +96,9 @@ const Hero = () => {
         <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none">
           <defs>
             <filter id="glow">
-              <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+              <feGaussianBlur stdDeviation="2.5" result="coloyellowBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="coloyellowBlur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
@@ -130,7 +130,7 @@ const Hero = () => {
       {matrixChars.map((char, index) => (
         <div
           key={index}
-          className="absolute text-cyber-red font-mono text-opacity-30"
+          className="absolute text-cyber-yellow font-mono text-opacity-30"
           style={{
             left: `${char.x}%`,
             top: `${char.y}%`,
@@ -145,7 +145,7 @@ const Hero = () => {
 
       {/* Horizontal scan line effect */}
       <div className="absolute inset-0 pointer-events-none z-10">
-        <div className="w-full h-[2px] bg-cyber-red/20 animate-scanline"></div>
+        <div className="w-full h-[2px] bg-cyber-yellow/20 animate-scanline"></div>
       </div>
 
       {/* Random pixelated interference effect */}
@@ -159,38 +159,38 @@ const Hero = () => {
       <div className="container mx-auto text-center z-10 relative">
         <div className="mb-8">
           <div
-            className={`inline-block py-1 px-3 bg-cyber-red/10 border border-cyber-red/30 rounded-sm mb-4 transition-all duration-1000 ${
+            className={`inline-block py-1 px-3 bg-cyber-yellow/10 border border-cyber-yellow/30 rounded-sm mb-4 transition-all duration-1000 ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
-            <span className="text-cyber-red text-xs font-mono">// BLACK WALL ACCESS GRANTED</span>
+            <span className="text-cyber-yellow text-xs font-mono">// BLACK WALL ACCESS GRANTED</span>
           </div>
 
           <div className={`transition-all duration-1000 delay-300 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">
-              <div className="border-[1px] border-cyber-red/50 bg-cyber-black/90 p-4 sm:p-6 relative retro-terminal">
+              <div className="border-[1px] border-cyber-yellow/50 bg-cyber-black/90 p-4 sm:p-6 relative retro-terminal">
                 {/* Terminal decoration corners */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyber-red"></div>
-                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyber-red"></div>
-                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyber-red"></div>
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyber-red"></div>
+                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyber-yellow"></div>
+                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-cyber-yellow"></div>
+                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-cyber-yellow"></div>
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-cyber-yellow"></div>
 
                 {/* Title with scan line effect */}
                 <div className="relative">
                   <h1 className="text-4xl md:text-5xl lg:text-7xl font-cyber font-bold tracking-tight">
-                    <Glitch text="Dyari" color="red" className="mr-3" />
+                    <Glitch text="Dyari" color="yellow" className="mr-3" />
                     <Glitch text="Ali" color="neonred" className="mr-3" />
-                    <Glitch text="Taher" color="yellow" />
+                    <Glitch text="Taher" color="red" />
                   </h1>
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-red/5 to-transparent animate-scanline pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-yellow/5 to-transparent animate-scanline pointer-events-none"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 border-t border-cyber-red/20 pt-4">
+          <div className="mt-8 border-t border-cyber-yellow/20 pt-4">
             <p className={`text-xl md:text-2xl font-tech mb-8 text-gray-400 transition-all duration-1000 delay-500 ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}>
@@ -207,22 +207,15 @@ const Hero = () => {
               View Projects
             </CyberButton>
 
-            <CyberButton href="#contact" variant="outline" size="lg" color='yellow'>
+            <CyberButton href="#contact" variant="outline" size="lg" color='red'>
               <Terminal className="mr-2 h-4 w-4" />
               Connect
             </CyberButton>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#projects" className="text-cyber-red">
-          <ChevronDown size={30} />
-        </a>
-      </div>
-
       {/* "Connecting..." text with blinking effect */}
-      <div className="absolute bottom-16 w-full text-center font-tech text-cyber-red text-sm opacity-70">
+      <div className="absolute bottom-20 w-full text-center font-tech text-cyber-yellow text-sm opacity-70">
         <span className="animate-blink inline-block mr-2">■</span>
         <span>CONNECTED TO BLACK WALL</span>
       </div>

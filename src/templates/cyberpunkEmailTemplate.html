@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Transmission Received</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    :root {
+      --neon-blue: #00f3ff;
+      --neon-pink: #ff2e88;
+      --neon-purple: #8b5cf6;
+      --neon-yellow: #f0db4f;
+      --dark-bg: #0a0a12;
+      --medium-bg: #1A1F2C;
+      --text-glow: 0 0 5px rgba(0, 243, 255, 0.7);
+      --border-glow: 0 0 8px rgba(139, 92, 246, 0.8);
+      --scanline: rgba(0, 243, 255, 0.1);
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background-color: var(--dark-bg);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, rgba(26, 31, 44, 0.9), rgba(10, 10, 18, 0.95));
+      border: 1px solid var(--neon-purple);
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+      position: relative;
+    }
+
+    .email-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--scanline) 50%
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.3;
+    }
+
+    .header {
+      background: linear-gradient(90deg, var(--medium-bg), var(--neon-purple));
+      color: #ffffff;
+      text-align: center;
+      padding: 25px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      animation: shine 4s infinite;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 2px;
+      text-shadow: var(--text-glow);
+    }
+
+    .header .secure-icon {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.2em;
+      animation: pulse 2s infinite;
+    }
+
+    .content {
+      padding: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .greeting {
+      color: var(--neon-yellow);
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px rgba(240, 219, 79, 0.7);
+      display: inline-block;
+      padding: 5px 0;
+      position: relative;
+    }
+
+    .greeting::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--neon-yellow), transparent);
+    }
+
+    .content p {
+      color: #b3b3b3;
+      margin-bottom: 20px;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .content .highlight {
+      color: var(--neon-blue);
+      font-weight: bold;
+      text-shadow: var(--text-glow);
+    }
+
+    .button-container {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .cyber-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: transparent;
+      color: var(--neon-blue);
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 1px solid var(--neon-blue);
+      box-shadow: inset 0 0 10px var(--neon-blue), 0 0 10px var(--neon-blue);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .cyber-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 243, 255, 0.4),
+        transparent
+      );
+      transition: all 0.6s ease;
+    }
+
+    .cyber-button:hover {
+      background-color: rgba(0, 243, 255, 0.1);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .cyber-button:hover::before {
+      left: 100%;
+    }
+
+    .footer {
+      background: rgba(26, 31, 44, 0.8);
+      color: #666;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      border-top: 1px solid var(--neon-purple);
+      position: relative;
+    }
+
+    .footer a {
+      color: var(--neon-pink);
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .footer a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--neon-pink);
+      transition: width 0.3s ease;
+    }
+
+    .footer a:hover {
+      text-shadow: 0 0 5px var(--neon-pink);
+    }
+
+    .footer a:hover::after {
+      width: 100%;
+    }
+
+    .encryption-tag {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      color: var(--neon-blue);
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    .data-bit {
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      background-color: var(--neon-blue);
+      margin: 0 1px;
+      opacity: 0.5;
+    }
+
+    .data-bit:nth-child(even) {
+      height: 8px;
+      background-color: var(--neon-purple);
+    }
+
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%) rotate(30deg);
+      }
+      100% {
+        transform: translateX(100%) rotate(30deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .data-stream {
+      margin: 10px 0;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .greeting {
+        font-size: 20px;
+      }
+
+      .cyber-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1><span class="secure-icon">⚡</span>SECURE TRANSMISSION</h1>
+    </div>
+    <div class="content">
+      <div class="greeting">Hello, {{from_name}}</div>
+
+      <p>
+        Your message has been successfully received and is being processed by our cyber networks. We've logged your data securely in our systems.
+      </p>
+
+      <p>
+        You can expect a response within <span class="highlight">24 hours</span>. Our specialized agents are currently analyzing your transmission and preparing an appropriate response protocol.
+      </p>
+
+      <p>
+        In the meantime, feel free to explore our digital domain or connect with us through our network channels.
+      </p>
+
+      <div class="button-container">
+        <a href="https://github.com/linGREEDO" class="cyber-button">ACCESS GITHUB HUB</a>
+      </div>
+
+      <div class="data-stream">
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+        <span class="data-bit"></span>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        This transmission is encrypted with BLACK ICE Protocol v3.7. If you did not initiate this contact, immediately notify <a href="mailto:killyfernando0@gmail.com">system security</a>.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Generate random encryption hash
+      const chars = '0123456789ABCDEF';
+      let hash = '';
+      for (let i = 0; i < 32; i++) {
+        hash += chars.charAt(Math.floor(Math.random() * chars.length));
+        if (i === 7 || i === 15 || i === 23) hash += '-';
+      }
+
+
+      // Animate data bits
+      const dataBits = document.querySelectorAll('.data-bit');
+      setInterval(() => {
+        dataBits.forEach(bit => {
+          bit.style.height = Math.floor(Math.random() * 12) + 4 + 'px';
+          bit.style.opacity = Math.random() * 0.5 + 0.5;
+        });
+      }, 300);
+
+      // Create glitch effect randomly
+      setInterval(() => {
+        if (Math.random() > 0.95) {
+          document.querySelector('.email-container').style.transform = `translateX(${Math.random() * 3 - 1.5}px)`;
+          setTimeout(() => {
+            document.querySelector('.email-container').style.transform = 'translateX(0)';
+          }, 100);
+        }
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

@@ -7,7 +7,6 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import EasterEgg from '../components/EasterEgg';
 import LoadingScreen from '../components/LoadingScreen';
 import { Terminal, AlertTriangle, Wifi, Battery, Shield } from 'lucide-react';
 
@@ -51,7 +50,7 @@ const Index = () => {
           const messages = [
             "SCANNING NEURAL SUBNET...",
             "BYPASSING ICE PROTOCOLS...",
-            "EXTRACTING NET CREDENTIALS...",
+            "EXTRACTING NET CyellowENTIALS...",
             "SEARCHING BLACK WALL DATABASE...",
             "NEURAL LINK ESTABLISHED...",
             "DECRYPTING SECURE FILES...",
@@ -102,29 +101,11 @@ const Index = () => {
 
         <Footer />
 
-        {/* Easter Eggs */}
-        <div className="fixed bottom-6 right-6 z-40">
-          <EasterEgg type="konami">
-            <div className="bg-cyber-red text-cyber-black p-4 rounded-md animate-bounce">
-              <h3 className="font-cyber font-bold mb-2">KONAMI CODE ACTIVATED!</h3>
-              <p className="text-sm">You found a secret! Keep exploring for more...</p>
-            </div>
-          </EasterEgg>
-        </div>
-
-        <div className="fixed bottom-6 left-6 z-40">
-          <EasterEgg type="hover">
-            <div className="bg-cyber-darkblue border border-cyber-pink p-3 rounded-md">
-              <Terminal className="text-cyber-pink" size={24} />
-            </div>
-          </EasterEgg>
-        </div>
-
         {/* Cyberpunk HUD Elements */}
         {showHUD && (
           <>
             {/* Top left status indicators */}
-            <div className="fixed top-20 left-4 z-30 font-mono text-xs text-cyber-red opacity-70">
+            <div className="fixed top-20 left-4 z-30 font-mono text-xs text-cyber-yellow opacity-70">
               <div className="flex items-center mb-2">
                 <Wifi size={14} className="mr-1" />
                 <span>NETRUNNER_LINK: ACTIVE</span>
@@ -140,7 +121,7 @@ const Index = () => {
             </div>
 
             {/* Bottom left scrolling status messages */}
-            <div className="fixed bottom-20 left-4 z-30 font-mono text-xs text-cyber-red opacity-70 w-48 h-28 overflow-hidden">
+            <div className="fixed bottom-20 left-4 z-30 font-mono text-xs text-cyber-yellow opacity-70 w-48 h-28 overflow-hidden">
               {statusMessages.map((msg, index) => (
                 <div
                   key={index}
@@ -157,7 +138,7 @@ const Index = () => {
 
             {/* Bottom right warning indicator */}
             {hackProgress > 75 && (
-              <div className="fixed bottom-20 right-4 z-30 font-mono text-xs text-cyber-red opacity-70 flex items-center">
+              <div className="fixed bottom-20 right-4 z-30 font-mono text-xs text-cyber-yellow opacity-70 flex items-center">
                 <AlertTriangle size={14} className="mr-1 animate-pulse" />
                 <span>WARNING: INTRUSION DETECTED</span>
               </div>

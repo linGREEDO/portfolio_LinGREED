@@ -1,5 +1,5 @@
-
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -109,7 +109,7 @@ export default {
 					'2%': { opacity: '0.8', transform: 'translate(-3px, 0)' },
 					'4%': { opacity: '1', transform: 'translate(0)' },
 					'19%': { opacity: '1', transform: 'translate(0)' },
-					'20%': { opacity: '0.7', transform: 'translate(10px, 0)', 'text-shadow': '-1px 0 red' },
+					'20%': { opacity: '0.7', transform: 'translate(10px, 0)', 'text-shadow': '-1px 0 yellow' },
 					'21%': { opacity: '1', transform: 'translate(0)' },
 					'49%': { opacity: '1', transform: 'translate(0)' },
 					'50%': { opacity: '0.5', transform: 'translate(-10px, 0)', 'text-shadow': '1px 0 blue' },
@@ -198,8 +198,11 @@ export default {
 				'flicker': 'flicker 2s linear infinite',
 				'data-flow': 'data-flow 15s linear infinite',
 				'glitch2': 'glitch2 1s infinite'
+			},
+			boxShadow: {
+				'glow-md': '0 0 10px #8B0000, 0 0 20px #8B0000, 0 0 30px #8B0000',
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-2 bg-cyber-black/90 backdrop-blur-lg border-b border-cyber-red/20'
+          ? 'py-2 bg-cyber-black/90 backdrop-blur-lg border-b border-cyber-yellow/20'
           : 'py-4 bg-transparent'
       }`}
     >
@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
           <span className="text-cyberpunk font-bold text-lg relative">
             Lin
-            <span className="text-cyber-red">GREED</span>
+            <span className="text-cyber-yellow">GREED</span>
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-cyber-red group-hover:w-full transition-all duration-300"></span>
           </span>
         </a>
@@ -119,13 +119,13 @@ const Navbar = () => {
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              <ChevronRight size={16} className="text-cyber-red mr-2" />
+              <ChevronRight size={16} className="text-cyber-yellow mr-2" />
               {link.name}
               <span
                 className={`absolute -bottom-1 left-0 h-[2px] ${
                   activeSection === link.href.substring(1)
                     ? 'w-full bg-cyber-yellow'
-                    : 'w-0 bg-cyber-red group-hover:w-full transition-all duration-300'
+                    : 'w-0 bg-cyber-yellow group-hover:w-full transition-all duration-300'
                 }`}
               ></span>
             </a>

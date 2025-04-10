@@ -21,14 +21,14 @@ const CyberButton = ({
   ...props
 }: CyberButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const baseStyles = "inline-flex items-center justify-center font-mono uppercase tracking-wider transition-all relative group overflow-hidden pixel-corners focus:outline-none";
-  
+
   const variantStyles = {
-    primary: "bg-cyber-red text-white hover:bg-cyber-red/90 border border-cyber-red shadow-[0_0_15px_rgba(234,56,76,0.5)]",
-    secondary: "bg-cyber-yellow text-cyber-black hover:bg-cyber-yellow/90 border border-cyber-yellow shadow-[0_0_15px_rgba(245,237,27,0.5)]",
-    outline: "bg-transparent border border-cyber-yellow text-cyber-yellow hover:bg-cyber-yellow/10",
-    ghost: "bg-transparent text-cyber-red hover:bg-cyber-red/10",
+    primary: "bg-cyber-yellow text-white hover:bg-cyber-yellow/90 border border-cyber-yellow shadow-[0_0_15px_rgba(234,56,76,0.5)]",
+    secondary: "bg-cyber-yellowc text-cyber-black hover:bg-cyber-yellowc/90 border border-cyber-yellowc shadow-[0_0_15px_rgba(245,237,27,0.5)]",
+    outline: "bg-transparent border border-cyber-yellow text-cyber-yellowc hover:bg-cyber-yellowc/10",
+    ghost: "bg-transparent text-cyber-yellow hover:bg-cyber-yellow/10",
   };
-  
+
   const sizeStyles = {
     sm: "text-xs py-1.5 px-3",
     md: "text-sm py-2 px-4",

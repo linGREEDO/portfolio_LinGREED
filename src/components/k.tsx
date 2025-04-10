@@ -11,6 +11,7 @@ const About = () => {
 
   return (
     <section id="about" className="section py-16 bg-cyber-black relative">
+
       <div className="container mx-auto">
         <div className="mb-12 text-center max-w-2xl mx-auto">
           <div className="border-2 border-cyber-yellow/30 inline-block px-4 py-1 mb-4">
@@ -38,8 +39,12 @@ const About = () => {
                   <span className="text-cyber-yellow ml-2">DYARI ALI TAHIR</span>
                 </div>
                 <div>
+                  <span className="text-gray-500">&gt; CLASS:</span>
+                  <span className="text-cyber-yellowc ml-2">NETRUNNER</span>
+                </div>
+                <div>
                   <span className="text-gray-500">&gt; SPECIALTY:</span>
-                  <span className="text-cyber-yellow ml-2">FULL-STACK DEVELOPMENT</span>
+                  <span className="text-cyber-yellowc ml-2">FULL-STACK DEVELOPMENT</span>
                 </div>
                 <div>
                   <span className="text-gray-500">&gt; LOCATION:</span>
@@ -57,7 +62,7 @@ const About = () => {
                   <pre>{`function initNetrunner() {
   console.log("Jacking in...");
   return {
-    skills: ["TypeScript", "React", "Node.js"],
+    skills: ["TS", "React", "Node"],
     status: "Ready to code"
   };
 }`}</pre>
@@ -74,16 +79,16 @@ const About = () => {
               </h3>
 
               <p className="mb-4 text-gray-300 font-mono">
-                Greetings, I'm a <span className="text-cyber-yellow">Full-Stack Software Developer</span> with expertise in creating immersive web applications and robust backend systems. I specialize in crafting solutions that merge functionality with cutting-edge design.
+                Greetings, I'm a <span className="text-cyber-yellow">NetRunner</span> and digital architect specializing in creating immersive web experiences. With expertise in frontend development and cybersecurity, I navigate the digital realm with precision and creativity.
               </p>
 
               <p className="mb-6 text-gray-300 font-mono">
-                Currently pursuing a Bachelor of Science in Computer Science at Knowledge University, I have been recognized as a top student in my department. My mission is to deliver high-quality, scalable, and secure software solutions.
+                My mission is to bridge the gap between functionality and cutting-edge design, crafting digital solutions that push boundaries while maintaining optimal performance and security.
               </p>
 
               <div className="mb-6 bg-cyber-darkblue/50 p-4 border-l-4 border-cyber-yellow">
                 <p className="text-gray-400 italic font-mono text-sm">
-                "Code is the closest thing we have to magic. In the neon haze of the future, it's how we bend reality." - <span className="text-cyber-yellow">cooked it with ChatGBT</span>
+                  "The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly."e - <span className="text-cyber-yellow">Anonymous Netrunner</span>
                 </p>
               </div>
             </div>
@@ -96,15 +101,15 @@ const About = () => {
                 <ul className="space-y-3 font-mono text-sm">
                   <li className="flex">
                     <span className="text-cyber-yellow mr-2">▹</span>
-                    <span>Freelancer - Full-Stack Software Developer (Sep 2022 - Present)</span>
-                  </li>
-                  <li className="flex">
-                    <span className="text-cyber-yellow mr-2">▹</span>
                     <span>5+ years crafting web applications</span>
                   </li>
                   <li className="flex">
                     <span className="text-cyber-yellow mr-2">▹</span>
                     <span>Specialized in React ecosystem</span>
+                  </li>
+                  <li className="flex">
+                    <span className="text-cyber-yellow mr-2">▹</span>
+                    <span>Backend systems architecture</span>
                   </li>
                 </ul>
               </div>
