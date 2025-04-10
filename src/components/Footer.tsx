@@ -49,8 +49,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-cyber text-white mb-4">ABOUT</h3>
-            <p className="text-gray-400 text-sm">
-              A cyberpunk-themed portfolio showcasing digital projects and tech expertise. Built with React and modern web technologies.
+            <p className="text-gray-400 text-sm">S
+            I am a passionate software developer with a keen interest in building innovative and efficient solutions. My portfolio showcases a variety of projects that highlight my skills in web development, problem-solving, and creativity. I am always eager to learn new technologies and take on challenging tasks to grow as a developer.
             </p>
           </div>
 
