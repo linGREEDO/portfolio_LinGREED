@@ -74,7 +74,7 @@ const About = () => {
               </h3>
 
               <p className="mb-4 text-gray-300 font-mono">
-                Greetings, I'm a <span className="text-cyber-yellow">Full-Stack Software Developer</span> with expertise in creating immersive web applications and robust backend systems. I specialize in crafting solutions that merge functionality with cutting-edge design.
+                Greetings, I'm a <span className="text-cyber-yellow">Full-Stack Web Developer</span> with expertise in creating immersive web applications and robust backend systems. I specialize in crafting solutions that merge functionality with cutting-edge design.
               </p>
 
               <p className="mb-6 text-gray-300 font-mono">
@@ -109,25 +109,25 @@ const About = () => {
                 </ul>
               </div>
 
-              <div className="bg-cyber-black/30 p-4 border border-cyber-yellow/10">
+                <div className="bg-cyber-black/30 p-4 border border-cyber-yellow/10">
                 <h4 className="text-lg font-cyber mb-3 flex items-center">
                   <span className="text-cyber-yellow mr-2">&gt;</span> Approach
                 </h4>
                 <ul className="space-y-3 font-mono text-sm">
                   <li className="flex">
-                    <span className="text-cyber-yellow mr-2">▹</span>
-                    <span>User-centered design</span>
+                  <span className="text-cyber-yellow mr-2">▹</span>
+                  <span>Focus on clean, maintainable, and scalable code</span>
                   </li>
                   <li className="flex">
-                    <span className="text-cyber-yellow mr-2">▹</span>
-                    <span>Cyberpunk-inspiyellow interfaces</span>
+                  <span className="text-cyber-yellow mr-2">▹</span>
+                  <span>Prioritize user experience and accessibility</span>
                   </li>
                   <li className="flex">
-                    <span className="text-cyber-yellow mr-2">▹</span>
-                    <span>Performance-optimized code</span>
+                  <span className="text-cyber-yellow mr-2">▹</span>
+                  <span>Sharpening skills through shared momentum</span>
                   </li>
                 </ul>
-              </div>
+                </div>
             </div>
           </div>
         </div>
