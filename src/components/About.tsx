@@ -116,7 +116,7 @@ const About = () => {
                 <ul className="space-y-3 font-mono text-sm">
                   <li className="flex">
                     <span className="text-cyber-yellow mr-2">▹</span>
-                    <span>User-centeyellow design methodology</span>
+                    <span>User-centered design</span>
                   </li>
                   <li className="flex">
                     <span className="text-cyber-yellow mr-2">▹</span>
